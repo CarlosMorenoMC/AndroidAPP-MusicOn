@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/startLayout"
+    tools:context=".StartActivity"
+    android:background="@drawable/drawable_gradient_animation_list">
+
+    <Button
+        android:id="@+id/button_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="319dp"
+        android:onClick="launchSecondActivity"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:text="@string/let_s_go" />
+
+    <EditText
+        android:id="@+id/editText_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_main"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/enter_your_name"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+</RelativeLayout>

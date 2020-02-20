@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "432328758959",
+    "firebase_url": "https://musicon-firebase.firebaseio.com",
+    "project_id": "musicon-firebase",
+    "storage_bucket": "musicon-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432328758959:android:aab162ad1b9509b33ba65a",
+        "android_client_info": {
+          "package_name": "com.pdm.musicon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432328758959-m1k4k5rbvgsj19qk9uu8lf361ln6aaoj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pdm.musicon",
+            "certificate_hash": "57223238cd750b001d453e42fc03e2246152a80e"
+          }
+        },
+        {
+          "client_id": "432328758959-a91f20irha3c77n3m0pfsfm61nuqvs3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeMOhBX-s6JK1RMccM2YI5-sJB0AHd6r4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432328758959-a91f20irha3c77n3m0pfsfm61nuqvs3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
