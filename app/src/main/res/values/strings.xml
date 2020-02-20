@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">MusicOn</string>
     <string name="upload">upload</string>
+    <string name="search">search</string>
     <string name="let_s_go">Let`s go</string>
     <string name="enter_your_name">Enter your name</string>
+    <string name="logo">logo</string>
+    <string name="musicon">MusicOn</string>
+    <string name="info">info</string>
+    <string name="my_action">My Action</string>
 </resources>

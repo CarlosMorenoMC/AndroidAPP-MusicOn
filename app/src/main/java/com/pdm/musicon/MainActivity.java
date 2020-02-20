@@ -3,12 +3,13 @@ package com.pdm.musicon;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.app.SearchManager;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.OpenableColumns;
@@ -20,6 +21,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -153,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.custom_menu, menu);
+
         return super.onCreateOptionsMenu(menu);
 
     }
@@ -171,9 +174,17 @@ public class MainActivity extends AppCompatActivity {
                 pickSong();
             }
 
+        } else if (item.getItemId()==R.id.nav_search){
+            Toast.makeText(getApplicationContext(), "Search pressed", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.nav_info) {
+            Toast.makeText(getApplicationContext(), "Made by Carlos Moreno", Toast.LENGTH_SHORT).show();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void search () {
+
     }
 
     /**
@@ -302,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Termina desubirlosdetalles a la BBDD
+     * Termina subir los detalles a la BBDD
      */
     private void uploadDetailsToDB(){
         Song song = new Song(songName, songUrl);
@@ -311,13 +322,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this, "Song Uploaded", Toast.LENGTH_SHORT);
+                    Toast.makeText(MainActivity.this, "Song Uploaded", Toast.LENGTH_SHORT).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT);
+                Toast.makeText(MainActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }

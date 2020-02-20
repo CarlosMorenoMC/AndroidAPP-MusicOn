@@ -1,13 +1,16 @@
 package com.pdm.musicon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class StartActivity extends AppCompatActivity {
     private RelativeLayout relativeLayout;
@@ -17,6 +20,8 @@ public class StartActivity extends AppCompatActivity {
             "com.pdm.musicon.extra.MESSAGE";
 
     private EditText mMessageEditText;
+
+    String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +38,14 @@ public class StartActivity extends AppCompatActivity {
     public void launchSecondActivity(View view) {
 
         Intent intent = new Intent(this, MainActivity.class);
-        String message = mMessageEditText.getText().toString();
+        String userName = mMessageEditText.getText().toString();
 
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+        if (userName.matches("")) {
+            mMessageEditText.setError("Type a name");
+        } else {
+            intent.putExtra(EXTRA_MESSAGE, userName);
+            startActivity(intent);
+        }
     }
 
     @Override
@@ -55,4 +64,5 @@ public class StartActivity extends AppCompatActivity {
             animationDrawable.stop();
         }
     }
+
 }

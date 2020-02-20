@@ -33,4 +33,17 @@
         android:importantForAutofill="no"
         android:inputType="text" />
 
+    <TextView
+        android:id="@+id/text_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText_start"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="51dp"
+        android:fontFamily="@font/coolvetica"
+        android:text="@string/musicon"
+        android:textSize="36sp" />
+
 </RelativeLayout>
