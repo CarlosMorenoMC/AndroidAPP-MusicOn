@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#9C27B0</color>
     <color name="black">#090000</color>
+    <color name="trblack">#6D090000</color>
     <color name="white">#FFFFFF</color>
 
     <color name="colorAmber_A400">#FFC400</color>

@@ -6,34 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/drawable_default_gradient"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/text_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textSize="@dimen/font_large"/>
+        android:textSize="@dimen/font_large" />
 
     <ListView
         android:id="@+id/myListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="120dp"
         android:choiceMode="singleChoice"
-        android:padding="10dp"
-        />
+        android:padding="10dp" >
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/logo"
+        android:elevation="0dp"
+        app:srcCompat="@mipmap/ic_launcher2_foreground" />
 
     <com.example.jean.jcplayer.view.JcPlayerView
         android:id="@+id/jcplayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:elevation="1dp"
+        android:background="#58CCB3"
         android:visibility="gone" />
+
+
+
 
 </RelativeLayout>

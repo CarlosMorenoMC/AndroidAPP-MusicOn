@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> arrayListSongsUrl = new ArrayList<>();
     ArrayAdapter<String> arrayAdapter;
 
-    JcPlayerView jcPlayerView;
+    JcPlayerView jcPlayerView ;
     ArrayList<JcAudio> jcAudios = new ArrayList<>();
 
     @Override
@@ -97,6 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 jcPlayerView.createNotification();
             }
         });
+
+        if(jcPlayerView.isPlaying()){
+
+            jcPlayerView.setVisibility(View.VISIBLE);
+            jcPlayerView.createNotification();
+        }
     }
 
     /**
